@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LinearLayoutView">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/full_name_hint"
+            tools:layout_editor_absoluteX="57dp"
+            tools:layout_editor_absoluteY="44dp" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/email_hint" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+94"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:padding="6dp"
+                tools:layout_editor_absoluteX="96dp"
+                tools:layout_editor_absoluteY="208dp" />
+
+            <EditText
+                android:id="@+id/editTextPhone2"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="phone"
+                android:hint="@string/mobile_hint"
+                tools:layout_editor_absoluteX="93dp"
+                tools:layout_editor_absoluteY="294dp" />
+
+            <Space
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:layout_editor_absoluteX="135dp"
+                tools:layout_editor_absoluteY="258dp"
+                android:layout_width="0dp" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/verify_btn" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/statusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                tools:layout_editor_absoluteX="130dp"
+                tools:layout_editor_absoluteY="272dp"
+                android:layout_marginEnd="30dp"
+                android:text="Text"/>
+
+            <Button
+                android:id="@+id/statusBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/change_btn" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Warmup Application</string>
+    <string name="contraint_heading">This is a Constraint Layout</string>
+    <string name="frame_layout_btn">Frame Layout</string>
+    <string name="relative_layout_btn">Relative Layout</string>
+    <string name="linear_layout_btn">Linear Layout</string>
+    <string name="image_txt">This is Android</string>
+    <string name="fname_hint">First Name</string>
+    <string name="lname_hint">Last Name</string>
+    <string name="address_hint">Address</string>
+    <string name="submit_btn">Submit</string>
+    <string name="full_name_hint">Full Name</string>
+    <string name="mobile_hint">Mobile Number</string>
+    <string name="email_hint">Email</string>
+    <string name="verify_btn">Verify</string>
+    <string name="change_btn">Change</string>
+</resources>
