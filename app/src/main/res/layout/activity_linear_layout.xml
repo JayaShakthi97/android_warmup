@@ -85,7 +85,7 @@
                 tools:layout_editor_absoluteX="130dp"
                 tools:layout_editor_absoluteY="272dp"
                 android:layout_marginEnd="30dp"
-                android:text="Text"/>
+                android:text="@string/single"/>
 
             <Button
                 android:id="@+id/statusBtn"

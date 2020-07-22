@@ -4,6 +4,8 @@
     <string name="frame_layout_btn">Frame Layout</string>
     <string name="relative_layout_btn">Relative Layout</string>
     <string name="linear_layout_btn">Linear Layout</string>
+    <string name="recycle_view_btn">Recycle View</string>
+    <string name="recycle_card">Recycle View with Card View</string>
     <string name="image_txt">This is Android</string>
     <string name="fname_hint">First Name</string>
     <string name="lname_hint">Last Name</string>
@@ -14,4 +16,7 @@
     <string name="email_hint">Email</string>
     <string name="verify_btn">Verify</string>
     <string name="change_btn">Change</string>
+    <string name="single">I\'m Single</string>
+    <string name="married">I\'m Married</string>
+    <string name="add_person_btn">ADD Person</string>
 </resources>

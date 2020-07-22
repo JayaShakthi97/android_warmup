@@ -3,6 +3,7 @@ package com.example.warmupapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -22,6 +23,16 @@ class MainActivity : AppCompatActivity() {
 
         linear_btn.setOnClickListener {
             val intent = Intent(this, LinearLayoutView::class.java)
+            startActivity(intent)
+        }
+
+        recycle_btn.setOnClickListener {
+            val intent = Intent(this, RecycleViewPage::class.java)
+            startActivity(intent)
+        }
+
+        recycle_card_btn.setOnClickListener {
+            val intent = Intent(this, RecyclerViewWithCards::class.java)
             startActivity(intent)
         }
     }
