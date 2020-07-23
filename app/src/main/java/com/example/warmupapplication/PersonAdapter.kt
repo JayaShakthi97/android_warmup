@@ -1,7 +1,6 @@
 package com.example.warmupapplication
 
 import android.graphics.Color
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,16 +8,24 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class PersonAdapter(private val persons: List<Person>, val itemClickListener: PersonListItemListener) :
+class PersonAdapter(
+    private val persons: List<Person>,
+    private val itemClickListener: PersonListItemListener
+) :
     RecyclerView.Adapter<PersonAdapter.ViewHolder>() {
 
-    inner class ViewHolder(val list: View) : RecyclerView.ViewHolder(list) {
-        val nameText: TextView = itemView.findViewById(R.id.person_name)
-        val onlineBtn: Button = itemView.findViewById(R.id.online_btn)
+    inner class ViewHolder(list: View) :
+        RecyclerView.ViewHolder(list) {
+        private val nameText: TextView = itemView.findViewById(R.id.person_name)
+        private val onlineBtn: Button = itemView.findViewById(R.id.online_btn)
 
-        fun bind(position: Int, clickListener: PersonListItemListener){
-            list.setOnClickListener {
-                clickListener.onBtnClick(position)
+        fun bind(item: Person, action: PersonListItemListener) {
+            nameText.text = item.name
+            onlineBtn.text = if (item.online) "Online" else "Offline"
+            if (item.online) onlineBtn.setBackgroundColor(Color.parseColor("#0FF903"))
+            else onlineBtn.setBackgroundColor(Color.parseColor("#F91003"))
+            onlineBtn.setOnClickListener {
+                action.onBtnClick(adapterPosition)
             }
         }
     }
@@ -33,13 +40,7 @@ class PersonAdapter(private val persons: List<Person>, val itemClickListener: Pe
 
     override fun onBindViewHolder(holder: PersonAdapter.ViewHolder, position: Int) {
         val person: Person = persons[position]
-        val textView = holder.nameText
-        textView.text = person.name
-        val button = holder.onlineBtn
-        holder.bind(position, itemClickListener)
-        button.text = if (person.online) "Online" else "Offline"
-        if (person.online) button.setBackgroundColor(Color.parseColor("#0FF903"))
-        else button.setBackgroundColor(Color.parseColor("#F91003"))
+        holder.bind(person, itemClickListener)
     }
 
     override fun getItemCount(): Int {

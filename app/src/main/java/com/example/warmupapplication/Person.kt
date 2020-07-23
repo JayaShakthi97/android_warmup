@@ -1,6 +1,6 @@
 package com.example.warmupapplication
 
-class Person(val name: String, val age: Int, val online: Boolean) {
+class Person(val name: String, val age: Int, var online: Boolean) {
     companion object{
         private var lastId = 0
 
